@@ -1,13 +1,45 @@
+/*@tailwind base;*/
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #101011;
+  --background: #aeafc3;
+  --primary: #74769e;
+  --secondary: #8f95f8;
+  --accent: #7f82bc;
+}
+
+/* Placeholder input text italics */
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+:-moz-placeholder {
+  font-style: italic;
+}
+::-moz-placeholder {
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  font-style: italic;
+}
+
+/* Main page */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
+  background-color: var(--background);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  color: var(--text);
 }

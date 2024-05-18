@@ -1,0 +1,12 @@
+::placeholder {
+    color: var(--text);
+    opacity: 0.5;
+}
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: var(--text);
+    opacity: 0.5;
+}
+
+input:focus {
+    outline: none;
+}
