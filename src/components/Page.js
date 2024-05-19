@@ -4,6 +4,7 @@ import margaritaImg from '../images/margarita.png';
 import mojitoImg from '../images/mojito.png';
 import cosmoImg from '../images/cosmo.png';
 import ginTonicImg from '../images/gin-tonic.png';
+import jackCokeImg from '../images/cola.png';
 
 function Page() {
     const marg = {
@@ -22,13 +23,13 @@ function Page() {
             'white rum': '2oz',
             'simple syrup': '0.5oz',
             'lime juice': '0.5oz',
-            'club soda/sparkling water': ' to fill'
+            'club soda': ' to fill'
         },
         'image': mojitoImg,
     }
 
     const cosmo = {
-        'name': 'Cosmo',
+        'name': 'Cosmopolitan',
         'ingredients': {
             'vodka': '2oz',
             'contreau': '1oz',
@@ -48,6 +49,15 @@ function Page() {
         'image': ginTonicImg,
     }
 
+    const jackCoke = {
+        'name': 'Jack and Coke',
+        'ingredients': {
+            'jack daniels': '2oz',
+            'coca-cola': '4oz',
+        },
+        'image': jackCokeImg,
+    }
+
     return (
         <div className="w-full flex flex-col items-center py-4">
             <input
@@ -55,11 +65,12 @@ function Page() {
                 className={"bg-2 rounded-full border-hidden text-color text-3xl text-text p-4"}
                 placeholder={"Search..."}
             />
-            <div className={"flex flex-col w-full items-center"}>
+            <div className={"flex flex-row flex-wrap gap-4 w-full items-start justify-center my-4"}>
                 <Drink props={marg} />
                 <Drink props={mojito} />
                 <Drink props={cosmo} />
                 <Drink props={gintonic} />
+                <Drink props={jackCoke} />
             </div>
         </div>
     );
