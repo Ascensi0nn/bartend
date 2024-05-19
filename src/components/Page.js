@@ -71,6 +71,12 @@ function Page() {
                 <Drink props={cosmo} />
                 <Drink props={gintonic} />
                 <Drink props={jackCoke} />
+
+                <Drink props={marg} />
+                <Drink props={mojito} />
+                <Drink props={cosmo} />
+                <Drink props={gintonic} />
+                <Drink props={jackCoke} />
             </div>
         </div>
     );

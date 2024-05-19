@@ -12,14 +12,6 @@
     cursor: pointer;
 }
 
-.drink-open {
-    height: auto !important;
-}
-
-.info-open {
-    display: block !important;
-}
-
 .image-holder {
     aspect-ratio: 1/1;
     height: 80%;

@@ -1,14 +1,20 @@
 import './App.css';
-import Page from './Page';
-import Header from './Header';
+import Home from './Page';
+import Drink from '../pages/Drink'
+
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
     return (
-        <div className="w-screen flex flex-col items-center gap-4 mt-4">
-            <Header />
-            <Page />
-            <h2>bottom</h2>
+        <div>
+            <Router>
+                <Routes>
+                    <Route path={'/'} element={<Home />}></Route>
+                    <Route path="/drink" element={<Drink />}></Route>
+                </Routes>
+            </Router>
         </div>
+
     );
 }
 

@@ -46,12 +46,11 @@ html {
   overflow-x: hidden
 }
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p, li {
   user-select: none;
 }
 
 img {
-  user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
