@@ -4,7 +4,7 @@ import './Header.css';
 function Header() {
     return (
         <div className="flex flex-row justify-evenly items-center w-full">
-            <div className="border-solid border-4 rounded-full w-16 p-1 bg-primary">
+            <div className="border-solid border-4 rounded-full w-16 p-1 bg-2">
                 <img
                     src={logo} alt="logo"
                     className="max-w-full"

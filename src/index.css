@@ -43,3 +43,7 @@ code {
     monospace;
   color: var(--text);
 }
+
+html {
+  overflow-x: hidden
+}
