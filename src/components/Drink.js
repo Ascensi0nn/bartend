@@ -7,16 +7,15 @@ const Drink = (props) => {
     return (
         <Link
             id={props.name}
-            className={"container bg-1"}
-            to={`/drink?${props.name}`}
+            className={"container bg-1 no-underline"}
+            to={`/drink?name=${props.name}`}
         >
             <div className="flex flex-row justify-around items-center mx-4 px-4 gap-2">
                 <div className={"border-primary aspect-square h-5/6 max-h-[100px]"}>
-                    <img className={"aspect-square h-full"} src={props.image} alt={'props.name'}/>
+                    <img className={"aspect-square h-full"} src={`/images/${props.img}`} alt={props.name}/>
                 </div>
-                <h1 className={"max-w-1/2 text-center"}>{props.name}</h1>
+                <h1 className={"max-w-1/2 text-center m-0 decoration-0 text-4"}>{props.name}</h1>
             </div>
-
         </Link>
     )
 }

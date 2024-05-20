@@ -1,61 +1,18 @@
 import './Page.css';
 import Drink from './Drink';
-import margaritaImg from '../images/margarita.png';
-import mojitoImg from '../images/mojito.png';
-import cosmoImg from '../images/cosmo.png';
-import ginTonicImg from '../images/gin-tonic.png';
-import jackCokeImg from '../images/cola.png';
+
+import useFetch from "react-fetch-hook";
 
 function Page() {
-    const marg = {
-        'name': 'Margarita',
-        'ingredients': {
-            'tequila': '1.5oz',
-            'cointreau': '0.75oz',
-            'lime juice': '0.75oz'
-        },
-        'image': margaritaImg,
+    const { data: posts, isLoading, error } = useFetch('http://localhost:8080/api/v1/drinks');
+
+    if (isLoading) {
+        console.log("loading")
+        return <h1>Loading...</h1>;
     }
 
-    const mojito = {
-        'name': 'Mojito',
-        'ingredients': {
-            'white rum': '2oz',
-            'simple syrup': '0.5oz',
-            'lime juice': '0.5oz',
-            'club soda': ' to fill'
-        },
-        'image': mojitoImg,
-    }
-
-    const cosmo = {
-        'name': 'Cosmopolitan',
-        'ingredients': {
-            'vodka': '2oz',
-            'contreau': '1oz',
-            'lime juice': '0.5oz',
-            'cranberry juice': ' a splash'
-        },
-        'image': cosmoImg,
-    }
-
-    const gintonic = {
-        'name': 'Gin and Tonic',
-        'ingredients': {
-            'gin': '2oz',
-            'tonic water': '4oz',
-            'lime': 'squeeze'
-        },
-        'image': ginTonicImg,
-    }
-
-    const jackCoke = {
-        'name': 'Jack and Coke',
-        'ingredients': {
-            'jack daniels': '2oz',
-            'coca-cola': '4oz',
-        },
-        'image': jackCokeImg,
+    if (error) {
+        return <h1>Error: {error}</h1>
     }
 
     return (
@@ -66,17 +23,11 @@ function Page() {
                 placeholder={"Search..."}
             />
             <div className={"flex flex-row flex-wrap gap-4 w-full items-start justify-center my-4"}>
-                <Drink props={marg} />
-                <Drink props={mojito} />
-                <Drink props={cosmo} />
-                <Drink props={gintonic} />
-                <Drink props={jackCoke} />
-
-                <Drink props={marg} />
-                <Drink props={mojito} />
-                <Drink props={cosmo} />
-                <Drink props={gintonic} />
-                <Drink props={jackCoke} />
+                {
+                    posts.map((post) => (
+                        <Drink props={post} />
+                    ))
+                }
             </div>
         </div>
     );
