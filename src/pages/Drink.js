@@ -38,8 +38,8 @@ function DrinkPage() {
                     <div className={'flex flex-col items-center w-[400px]'}>
                         <h1 className={'text-center'}>Instructions</h1>
                         {
-                            props.instructions.split('\n').map(instruction => (
-                                <p className={'text-center text-xl w-1/2 mt-0'}>{instruction}</p>
+                            props.instructions.split('\n').map((instruction, index) => (
+                                <p key={index} className={'text-center text-xl w-1/2 mt-0'}>{instruction}</p>
                             ))
                         }
                     </div>
@@ -47,8 +47,8 @@ function DrinkPage() {
                         <h1 className={'text-center'}>Ingredients</h1>
                         <ul className="inline-block text-center list-inside mt-0">
                             {
-                                props.ingredients.map((ingredient) => (
-                                    <li className={'text-xl'}>{ingredient.name + ' : ' + ingredient.quantity}</li>
+                                props.ingredients.map((ingredient, index) => (
+                                    <li key={index} className={'text-xl'}>{ingredient.name + ' : ' + ingredient.quantity}</li>
                                 ))
                             }
                         </ul>
