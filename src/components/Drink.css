@@ -5,6 +5,7 @@
 
 .container {
     min-width: 300px;
+    height: 110px;
     border: solid black 5px;
     border-radius: 50px;
     overflow: hidden;
