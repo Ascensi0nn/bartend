@@ -8,18 +8,16 @@ const Drink = (props) => {
     return (
         <Link
             id={props.name}
-            className={"container flex items-center bg-1 no-underline"}
+            className={"container flex items-center justify-center bg-1 no-underline"}
             to={`/drink?name=${props.name}`}
         >
-            <div className="flex flex-row justify-around items-center mx-4 px-4 gap-2">
-                <div className={"border-primary aspect-square max-h-[100px]"}>
-                    <Image
-                        lowResSrc={`/images/low-${props.img}`}
-                        highResSrc={`/images/${props.img}`}
-                        alt={props.name}
-                    />
-                </div>
-                <h1 className={"max-w-1/2 text-center m-0 decoration-0 text-4"}>{props.name}</h1>
+            <div className="flex flex-row w-full justify-between items-center mx-4 gap-2">
+                <Image
+                    lowResSrc={`/images/low-${props.img}`}
+                    highResSrc={`/images/${props.img}`}
+                    alt={props.name}
+                />
+                <h1 className={"max-w-1/2 text-center ml-2 decoration-0 text-4"}>{props.name}</h1>
             </div>
         </Link>
     )

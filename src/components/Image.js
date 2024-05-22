@@ -5,8 +5,8 @@ const Image = ({ alt, lowResSrc, highResSrc }) => {
 
     const styles = {
         image: {
-            height: '100px',
-            width: '100px',
+            height: '6rem',
+            width: '6rem',
             aspectRatio: '1/1',
         },
     }

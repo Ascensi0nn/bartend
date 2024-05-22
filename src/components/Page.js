@@ -21,11 +21,11 @@ function Page() {
     }, []);
 
     return (
-        <div className="w-full flex flex-col items-center py-4">
+        <div className="w-full max-w-[1200px] flex flex-col items-center py-4">
             <input
                 id={'search'}
                 type={"text"}
-                className={"bg-2 rounded-full border-hidden text-color text-3xl text-text p-4"}
+                className={"bg-2 w-5/6 max-w-[1200px] rounded-full border-hidden text-color text-3xl text-text p-4"}
                 placeholder={"Search..."}
                 onChange={ReloadDrinks}
             />
