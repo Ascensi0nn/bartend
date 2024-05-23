@@ -3,10 +3,9 @@
 import useFetch from "react-fetch-hook";
 
 function DrinkPage() {
-
     const name = new URLSearchParams(window.location.search).get('name');
 
-    const { data: posts, isLoading, error } = useFetch(`http://localhost:8080/api/v1/drinks?query=${name}&strict=1}`);
+    const { data: posts, isLoading, error } = useFetch(`http://2n.lol:8080/api/v1/drinks?query=${name}&strict=1}`);
 
     if (isLoading) {
         console.log("loading")

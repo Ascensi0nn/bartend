@@ -37,12 +37,6 @@ body {
   align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-  color: var(--text);
-}
-
 html {
   overflow-x: hidden
 }

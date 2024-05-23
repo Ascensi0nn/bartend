@@ -6,9 +6,9 @@ import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
     return (
-        <Router>
+        <Router basename={'/bartend'}>
             <Routes>
-                <Route path={'/'} element={<Home />}></Route>
+                <Route path='/' element={<Home />}></Route>
                 <Route path="/drink" element={<Drink />}></Route>
             </Routes>
         </Router>
