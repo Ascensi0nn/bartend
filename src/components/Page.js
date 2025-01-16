@@ -13,7 +13,7 @@ function Page() {
             searchVal = `?query=${search.value}&strict=1`;
         }
 
-        fetch(`http://2n.lol:8080/api/v1/drinks${searchVal}`).then(res => res.json()).then(data => { setProps(data) });
+        fetch(`http://15.204.235.67:8080/api/v1/drinks${searchVal}`).then(res => res.json()).then(data => { setProps(data) });
     }
 
     useEffect(() => {
